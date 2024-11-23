@@ -1,0 +1,15 @@
+Key Concepts
+
+    DTO:
+        Used to expose only necessary information to the client.
+        Decouples persistence logic from the API layer.
+
+    Mapper:
+        Converts between Entity and DTO for seamless data transformation.
+        MapStruct is efficient and avoids manual boilerplate.
+
+    Service:
+        Handles business logic and delegates data persistence to the repository.
+
+    Controller:
+        Exposes REST endpoints for CRUD operations and delegates work to the service layer.
