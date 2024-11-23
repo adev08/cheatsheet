@@ -1,0 +1,28 @@
+Key Customizations
+
+    Styled Stepper (CustomStepper):
+        Added padding, rounded corners, and a box shadow for a card-like appearance.
+
+    Styled Step Label (CustomStepLabel):
+        Customized the step icon colors and text fill based on the active state.
+
+    Styled Step Content (CustomStepContent):
+        Styled the step content area with borders, background color, and padding for a distinct look.
+
+    Styled Buttons (CustomButton):
+        Added hover effects and border radius for consistency.
+
+    Dynamic Content Rendering:
+        Displayed different content based on the current active step using the renderStepContent function.
+
+
+
+Run the Custom Stepper
+
+To test it, include the CustomStepperComponent in your application:
+
+import React from "react";
+import ReactDOM from "react-dom";
+import CustomStepperComponent from "./CustomStepperComponent";
+
+ReactDOM.render(<CustomStepperComponent />, document.getElementById("root"));
