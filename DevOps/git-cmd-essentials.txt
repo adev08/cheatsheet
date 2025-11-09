@@ -1,1 +1,66 @@
-git commands essentials
+## Creating a new repository
+
+git init
+git add --all
+git commit -m "Initial commit"
+git remote add origin https://github.com/<user>/<repo>.git
+git push -u origin master
+
+## Working with Local Changes
+git status 
+git add --all
+git add -p <file>
+git commit -m "Your message here"
+
+## Viewing history
+git log
+git log -p <file>
+git blame <file>
+
+## Branching and merging
+git branch -av 
+git branch <new-branch>
+git checkout <branch>
+git merge <branch>
+
+##Undoing Changes
+git reset --hard HEAD
+git checkout HEAD <file>
+git revert <commitId>
+
+## Additional essentials commands
+
+## Clone a repo
+git clone  https://github.com/<user>/<repo>.git
+
+## Pulling changes from remote
+git pull origin master
+
+## Pushing changes to remote
+git push origin <branch>
+
+## Stashing changes
+git stash           # Stash changes
+git stash list      # List all staches
+git stash apply     # Apply the latest stash
+git stash drop      # Drop the latest stash
+
+## Tagging
+git tag <tag-name>             # create a new tag
+git tag                        # list all tags
+git push origin <tag-name>     # push tag to remote
+
+
+## Viewing differences
+git diff                  # Show changes between working directory and index
+git diff HEAD             # Show changes between working directory and last commit
+
+## Deleting branches
+git branch -d <branch>     # Delete a local branch (only if merged)
+git branch -D <branch>     # Force delete a local branch (even if unmerged)
+
+
+## Working with remotes
+git remote -v                  # List all remote repositories
+git remote add <name> <url>    # Add a new remote repository
+git remote remove <name>       #
