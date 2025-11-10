@@ -8,7 +8,7 @@ function useLocalStorage(key: string) {
 
   const q = useQuery({
     queryKey,
-    queryFn: () => localStorage.getItem(key);
+    queryFn: () => localStorage.getItem(key)
   });
 
   const setValue = userCallback(
