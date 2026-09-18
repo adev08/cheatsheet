@@ -1,0 +1,31 @@
+services:
+  postgres:
+    image: postgres:18.6
+    container_name: postgres_db
+    restart: always
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: Sup3rSecr3tP@ssw0rd
+      POSTGRES_DB: dev-db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  pgadmin:
+    image: dpage/pgadmin4:9.18.0
+    container_name: pgadmin_web
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: alexjunks08@gmail.com
+      PGADMIN_DEFAULT_PASSWORD: admInP@ssw0rd
+    ports:
+      - "5050:80"
+    depends_on:
+      - postgres
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin
+
+volumes:
+  postgres_data:
+  pgadmin_data:
