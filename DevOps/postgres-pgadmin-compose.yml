@@ -1,3 +1,5 @@
+# docker compose -f my-custom-file.yml up -d
+
 services:
   postgres:
     image: postgres:18.6
